@@ -1,18 +1,15 @@
 <div class="container">
-  <h2 class="mt-5 mb-4 text-center">Lista de Pasteis</h2>
+  <h2 class="mt-5 mb-4 text-center">Lista de Pizzas</h2>
   <div class="row">
-    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let pastel of pasteis; let i = index">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let pizza of pizzas; let i = index">
       <div class="card h-100">
-        <img class="card-img-top" [src]="imagens[i]" alt="{{ pastel.nome }}">
+        <img class="card-img-top" [src]="imagens[i]" alt="{{ pizza.nome }}">
         <div class="card-body">
-          <h5 class="card-title">{{ pastel.nome }}</h5>
-          <p class="card-text">{{ pastel.descricao }}</p>
-          <p class="card-text">R$ {{ pastel.preco }}</p>
+          <h5 class="card-title">{{ pizza.nome }}</h5>
+          <p class="card-text">{{ pizza.descricao }}</p>
+          <p class="card-text">R$ {{ pizza.preco }}</p>
           
-            <td>
-              <button (click)="addToCart(pastel)">+</button>
-            </td>
-          
+          <button (click)="addToCart(pizza)">+</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,14 @@
+.navbar {
+    border-bottom: 2px solid #ccc; /* Adiciona uma borda na parte inferior da navbar */
+  }
+  
+  .nav-link {
+    border-right: 1px solid #ccc; /* Adiciona borda direita em cada link */
+    padding: 0.5rem 1rem; /* Espaçamento interno para os links */
+    transition: background-color 0.3s ease; /* Adiciona transição suave para a mudança de cor de fundo */
+  }
+  
+  .nav-link:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo ao passar o mouse */
+  }
+  

@@ -1,0 +1,63 @@
+/* src/app/banner/banner.component.css */
+.banner {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 5px solid #ff6600;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #333;
+  position: relative;
+  z-index: 1;
+  animation: textFadeIn 2s ease-in-out;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.banner i {
+  margin: 0 10px;
+  animation: iconBounce 2s infinite;
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

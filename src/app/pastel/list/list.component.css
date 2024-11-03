@@ -1,0 +1,53 @@
+
+  
+ /* Estilos para os cards */
+.pastel-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.pastel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #ffcc00; /* Cor da borda ao passar o mouse */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* Container e título */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos responsivos */
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 150px;
+  }
+}

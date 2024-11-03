@@ -16,5 +16,5 @@ import { HomeComponent } from './home/home.component';
     imports: [CommonModule, RouterOutlet, LoginComponent, MenuComponent, BannerComponent, ListComponent]
 })
 export class AppComponent {
-  title = 'pastelaria';
+  title = 'pizzaria';
 }

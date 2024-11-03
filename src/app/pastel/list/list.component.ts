@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PastelService } from '../pastel.service';
-import { Pastel } from '../pastel.model';
+import { PizzaService } from '../pizza.service';
+import { Pizza } from '../pizza.model';
 import { CommonModule } from '@angular/common';
 import {CartService} from '../../pedido/cart/cart.service'
 import { CartItem } from '../../pedido/cart/card';
@@ -18,7 +18,7 @@ export class ListComponent {
 
   cartItems: CartItem[] = []; // Array para armazenar os itens do carrinho
 
-  pasteis: any[] = [];
+  pizzas: any[] = [];
   imagens: any[] = [
     'assets/imagens/carne.png',
     'assets/imagens/queijo.jpg',
@@ -34,33 +34,33 @@ export class ListComponent {
   
 
 
-  constructor(private pastelService: PastelService, private cartService: CartService) {}
+  constructor(private pizzaService: PizzaService, private cartService: CartService) {}
 
 
   ngOnInit(): void {
-    this.pastelService.getPasteis().subscribe(
+    this.pizzaService.getPizzas().subscribe(
       data => {
-        this.pasteis = data.map((pastel, index) => {
+        this.pizzas = data.map((pizzas, index) => {
           return {
-            ...pastel,
+            ...pizzas,
           };
         });
       },
       error => {
-        console.error('Erro ao carregar os pasteis', error);
+        console.error('Erro ao carregar os pizzas', error);
       }
     );
 
   }
   
 
-  addToCart(pastel: Pastel) {
+  addToCart(pizza: Pizza) {
     // Converte o objeto Pastel para um objeto CartItem
     const item: CartItem = {
-      id: pastel.id,
-      nome: pastel.nome,
+      id: pizza.id,
+      nome: pizza.nome,
       quantidade: 0, // Será atualizado no serviço
-      precoUnitario: pastel.preco
+      precoUnitario: pizza.preco
     };
 
     this.cartService.addToCart(item); // Adiciona ao carrinho

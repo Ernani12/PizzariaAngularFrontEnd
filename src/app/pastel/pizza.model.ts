@@ -1,4 +1,4 @@
-export class Pastel {
+export class Pizza {
     id: number;
     nome: string;
     descricao: string;

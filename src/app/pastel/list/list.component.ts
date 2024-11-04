@@ -20,10 +20,10 @@ export class ListComponent {
 
   pizzas: any[] = [];
   imagens: any[] = [
-    'assets/imagens/carne.png',
+    'assets/imagens/calabreza.jpg',
     'assets/imagens/queijo.jpg',
-    'assets/imagens/palmito.jpg',
-    'assets/imagens/presuqueijo.jpg',
+    'assets/imagens/frango.jpg',
+    'assets/imagens/portuguesa.jpg',
     'assets/imagens/vegetariano.jpg',
     'assets/imagens/tomate.jpg',
     'assets/imagens/milho.jpg',
